@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Ubuntu+Mono&display=swap');
+
+body {
+    --colours-bg-1: #FFFFFF;
+    --colours-bg-2: #F8F9FA;
+    --colours-bg-3: #E4E9ED;
+    --colours-bg-4: #D7DDE4;
+
+    --colours-p-1: #15151A;
+    --colours-p-2: #676F74;
+    --colours-p-3: #CDD1D5;
+
+    --colours-s-1: #B0B5B9;
+    --colours-s-2: #E4E9ED;
+
+    --colours-h-1: #15151A;
+    --colours-h-2: #FFFFFF;
+    --colours-h-3: #E44461;
+
+    --colours-success: #7DCEA0;
+    --colours-error: #A93226;
+
+    --fonts-mono: "Ubuntu Mono", monospace;
+    --fonts-main: "Source Sans 3", sans-serif;
+
+    --state-hover-1: rgba(0,0,0,0.04);
+    --state-hover-2: rgba(255,255,255,0.12);
+    --state-active-1: rgba(0,0,0,0.06);
+    --state-active-2: rgba(255,255,255,0.24);
+    --state-overlay: rgba(0,0,0,0.48);
+
+    --transition-fast: 0.12s;
+    --transition-medium: 0.4s;
+}

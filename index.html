@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Classifying HPB Vasculature</title>
+        <link rel="stylesheet" href="./css/theme.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+        <div id="viewport">
+            <div id="table">
+                <form id="form">
+
+                    <!-- FLV -->
+                    <div class="span" style="grid-row: 1 / span 3;">W</div>
+                    <div class="title" style="grid-column: 2 / span 2;">Vessel present in FLV</div>
+                    <div data-id="flv-vessel" class="check"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 2 / span 2;">Tracable to</div>
+                    <div style="grid-column: 3 / span 1;">LGA</div>
+                    <div data-group="flv-trace" data-value="lga" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">Aorta</div>
+                    <div data-group="flv-trace" data-value="aorta" class="radio"><input type="checkbox"/></div>
+                    
+                    <!-- Anterior MPV -->
+                    <div class="span" style="grid-row: 4 / span 8;">X</div>
+                    <div class="title" style="grid-column: 2 / span 2;">Vessel left to MPV</div>
+                    <div data-id="ampv-vessel" class="check"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 5 / span 4;">Tracable to</div>
+                    <div style="grid-column: 3 / span 1;">Aorta</div>
+                    <div data-group="ampv-trace" data-value="aorta" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">Celiac Trunk</div>
+                    <div data-group="ampv-trace" data-value="ct" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">SMA</div>
+                    <div data-group="ampv-trace" data-value="sma" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">CM Trunk</div>
+                    <div data-group="ampv-trace" data-value="cm" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 9 / span 3;">Terminal Branch</div>
+                    <div style="grid-column: 3 / span 1;">LHA</div>
+                    <div data-group="ampv-branch" data-value="lha" class="checkgroup"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">RHA</div>
+                    <div data-group="ampv-branch" data-value="rha" class="checkgroup"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">GDA</div>
+                    <div data-group="ampv-branch" data-value="gda" class="checkgroup"><input type="checkbox"/></div>
+
+                    <!-- Posterior MPV -->
+                    <div class="span" style="grid-row: 12 / span 10;">Y</div>
+                    <div class="title" style="grid-column: 2 / span 2;">Vessel Right / Posterior to MPV</div>
+                    <div data-id="pmpv-vessel" class="check"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 13 / span 6;">Tracable to</div>
+                    <div style="grid-column: 3 / span 1;">None</div>
+                    <div data-group="pmpv-trace" data-value="n" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">Aorta</div>
+                    <div data-group="pmpv-trace" data-value="aorta" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">Celiac Trunk</div>
+                    <div data-group="pmpv-trace" data-value="ct" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">SMA</div>
+                    <div data-group="pmpv-trace" data-value="sma" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">CM Trunk</div>
+                    <div data-group="pmpv-trace" data-value="cm" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">CHA</div>
+                    <div data-group="pmpv-trace" data-value="cha" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 19 / span 3;">Terminal Branch</div>
+                    <div style="grid-column: 3 / span 1;">LHA</div>
+                    <div data-group="pmpv-branch" data-value="lha" class="checkgroup"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">RHA</div>
+                    <div data-group="pmpv-branch" data-value="rha" class="checkgroup"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">GDA</div>
+                    <div data-group="pmpv-branch" data-value="gda" class="checkgroup"><input type="checkbox"/></div>
+
+                    <!-- SMV -->
+                    <div class="span" style="grid-row: 22 / span 6;">Z</div>
+                    <div class="title" style="grid-column: 2 / span 2;">Vessel Posterior to SMV</div>
+                    <div data-id="smv-vessel" class="check"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 23 / span 2;">Tracable to</div>
+                    <div style="grid-column: 3 / span 1;">Aorta</div>
+                    <div data-group="smv-trace" data-value="aorta" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">SMA</div>
+                    <div data-group="smv-trace" data-value="sma" class="radio"><input type="checkbox"/></div>
+                    <div style="grid-column: 2 / span 1; grid-row: 25 / span 3;">Terminal Branch</div>
+                    <div style="grid-column: 3 / span 1;">LHA</div>
+                    <div data-group="smv-branch" data-value="lha" class="checkgroup"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">RHA</div>
+                    <div data-group="smv-branch" data-value="rha" class="checkgroup"><input type="checkbox"/></div>
+                    <div style="grid-column: 3 / span 1;">GDA</div>
+                    <div data-group="smv-branch" data-value="gda" class="checkgroup"><input type="checkbox"/></div>
+
+                    <!-- With Leash -->
+                    <div class="span" style="grid-column: 1 / span 3;">Leash of Vessels in Uncinate/Head of Pancreas</div>
+                    <div data-id="leash-vessel" class="check"><input type="checkbox"/></div>
+
+                </form>
+            </div>
+            <div id="result">
+                <div>
+                    <h1 id="score">-</h1>
+                    <canvas id="drawing"></canvas>
+                    <div id="drawing_error"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/ui.js" type="module"></script>
+        <script src="./js/events.js" type="module"></script>
+        <script src="./js/form.js" type="module"></script>
+        <script src="./js/score.js" type="module"></script>
+        <script src="./js/diagram.js" type="module"></script>
+    </body>
+</html>

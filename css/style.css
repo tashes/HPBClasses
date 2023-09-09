@@ -1,0 +1,132 @@
+body
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--colours-bg-1);
+}
+
+#viewport
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+#viewport > div
+{
+    width: 50%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+#table > form
+{
+    padding: 8px;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 80px 1fr 1fr 80px;
+    grid-template-rows: repeat(28, minmax(80px, 1fr));
+    box-sizing: border-box;
+    font-family: var(--fonts-main);
+}
+#table > form > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--colours-bg-2);
+}
+#table > form > .span
+{
+    font-weight: bold;
+    background: var(--colours-bg-4);
+}
+#table > form > .title
+{
+    background: var(--colours-bg-3);
+}
+#table > form > .check,
+#table > form > .checkgroup,
+#table > form > .radio
+{
+    grid-column: 4 / span 1;
+    cursor: pointer;
+}
+#table > form > .check:has(input[type=checkbox]:checked)::after,
+#table > form > .checkgroup:has(input[type=checkbox]:checked)::after,
+#table > form > .radio:has(input[type=checkbox]:checked)::after
+{
+    content: "✓"
+}
+#table > form > .check > input,
+#table > form > .checkgroup > input,
+#table > form > .radio > input
+{
+    display: none;
+}
+#result
+{
+    background:var(--colours-bg-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#result > div:nth-child(1)
+{
+    width:300px;
+    padding: 16px;
+    box-sizing: border-box;
+    background:var(--colours-bg-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result > div:nth-child(1) > h1
+{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: var(--fonts-main);
+}
+#result > div:nth-child(1) > canvas
+{
+    width: 250px;
+    height: 200px;
+}
+
+#result > div:nth-child(1)
+{
+    position: relative;
+}
+#drawing_error
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--colours-bg-3);
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: var(--fonts-main);
+}
+#drawing_error:not(:empty)
+{
+    display: flex;
+}
