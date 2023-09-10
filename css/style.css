@@ -130,3 +130,153 @@ body
 {
     display: flex;
 }
+
+#questions
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--colours-bg-2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: opacity var(--transition-medium);
+}
+#questions.opening
+{
+    opacity: 0;
+}
+#questions.closing
+{
+    opacity: 0;
+    pointer-events: none;
+}
+#questions.closed
+{
+    display: none;
+}
+#qopen
+{
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 16px;
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    background: var(--colours-bg-3);
+    font-family: var(--fonts-main);
+    cursor: pointer;
+}
+#qclose
+{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: var(--fonts-main);
+}
+#qclose:hover
+{
+    background: var(--state-hover-1);
+}
+#qback
+{
+    padding: 16px;
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    cursor: pointer;
+    transition: opacity var(--transition-medium);
+}
+#qback:hover
+{
+    background: var(--state-hover-1);
+}
+#qback.disable
+{
+    opacity: 0;
+    pointer-events: none;
+}
+#slides
+{
+    width: calc(100% - 288px);
+    height: calc(100% - 288px);
+    background: var(--colours-bg-3);
+    position: relative;
+}
+#slides > div
+{
+    width:100%;
+    height: 100%;
+    position:absolute;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity var(--transition-medium);
+}
+#slides > div.active
+{
+    opacity: 1;
+    pointer-events: all;
+}
+#slides > div .question
+{
+    width: 80%;
+    font-family: var(--fonts-main);
+    font-size: 2em;
+    margin-bottom: 16px;
+}
+#slides > div .answers
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#slides > div .answers > div
+{
+    width: minmax(200px, 100%);
+    min-width: 200px;
+    border-radius: 8px;
+    margin: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    user-select: none;
+    background: var(--colours-bg-4);
+    font-family: var(--fonts-main);
+}
+#slides > div .answers > div.selected
+{
+    outline: 2px solid black;
+}
+#slides > div .answers > div > div
+{
+    padding: 16px;
+    text-align: center;
+}
+#slides > div .answers > div > div:hover
+{
+    background: var(--state-hover-1);
+}
+#slides > div .answers > div > div:active
+{
+    background: var(--state-active-1);
+}
+#slides > div .answers > div.selected > div
+{
+    background: var(--state-active-1);
+}

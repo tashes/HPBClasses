@@ -20,6 +20,10 @@ class Checkbox extends Element {
         });
     }
 
+    reset () {
+        this.state = false;
+    }
+
     set state (state) {
         this.e.setAttribute('data-state', state);
         this._state = state;
@@ -76,6 +80,11 @@ class CheckGroup extends Element {
         el.dispatchEvent(evt);
     }
 
+    reset () {
+        let vals = Array.from(this._state.values());
+        vals.forEach((val) => this.remove(val));
+    };
+
     get state () {
         return Array.from(this._state.values());
     };
@@ -102,6 +111,10 @@ class RadioGroup extends Element {
             e.preventDefault();
             e.stopPropagation();
         });
+    }
+
+    reset () {
+        this.state = undefined;
     }
 
     set state (value) {
@@ -176,4 +189,8 @@ document.querySelectorAll('.checkgroup').forEach(ele => {
 
 export async function getUIElement (name) {
     return ALL.get(name);
+};
+
+export async function getAllUIElements () {
+    return Array.from(ALL.values());
 };

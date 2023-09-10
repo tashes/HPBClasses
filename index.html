@@ -89,11 +89,114 @@
 
                 </form>
             </div>
+            <div id="qopen">Questionnaire Version</div>
             <div id="result">
                 <div>
                     <h1 id="score">-</h1>
                     <canvas id="drawing"></canvas>
                     <div id="drawing_error"></div>
+                </div>
+            </div>
+        </div>
+        <div id="questions">
+            <div id="qclose">X</div>
+            <div id="qback" class="disable">← Back</div>
+            <div id="slides">
+                <div id="slide_1" class="active">
+                    <div class="question">Is there a vessel present in the <b>FLV</b>?</div>
+                    <div class="answers">
+                        <div id="slide_1_1"><div>Yes</div></div>
+                        <div id="slide_1_2"><div>No</div></div>
+                    </div>
+                </div>
+                <div id="slide_2">
+                    <div class="question">Where is the vessel present in the <b>FLV</b> traceable to?</div>
+                    <div class="answers">
+                        <div id="slide_2_1"><div>LGA</div></div>
+                        <div id="slide_2_2"><div>Aorta</div></div>
+                    </div>
+                </div>
+                <div id="slide_3">
+                    <div class="question">Is there a vessel <b>left of the main portal vein</b>?</div>
+                    <div class="answers">
+                        <div id="slide_3_1"><div>Yes</div></div>
+                        <div id="slide_3_2"><div>No</div></div>
+                    </div>
+                </div>
+                <div id="slide_4">
+                    <div class="question">Where is the vessel <b>left of the main portal vein</b> tracable to?</div>
+                    <div class="answers">
+                        <div id="slide_4_1"><div>Aorta</div></div>
+                        <div id="slide_4_2"><div>Celiac Trunk</div></div>
+                        <div id="slide_4_3"><div>Superior Mesenteric Artery (SMA)</div></div>
+                        <div id="slide_4_4"><div>Celiomesenteric Trunk (CM Trunk)</div></div>
+                    </div>
+                </div>
+                <div id="slide_5">
+                    <div class="question">Which branches arise from the vessel <b>left of the main portal vein</b>?</div>
+                    <div class="answers">
+                        <div id="slide_5_1"><div>Left Hepatic Artery (LHA)</div></div>
+                        <div id="slide_5_2"><div>Right Hepatic Artery (RHA)</div></div>
+                        <div id="slide_5_3"><div>Gastroduodenal Artery (GDA)</div></div>
+                        <div id="slide_5_next"><div>Next →</div></div>
+                    </div>
+                </div>
+                <div id="slide_6">
+                    <div class="question">Is there a vessel <b>right or posterior to the main portal vein</b>?</div>
+                    <div class="answers">
+                        <div id="slide_6_1"><div>Yes</div></div>
+                        <div id="slide_6_2"><div>No</div></div>
+                    </div>
+                </div>
+                <div id="slide_7">
+                    <div class="question">Where is the vessel <b>right or posterior to the main portal vein</b> tracable to?</div>
+                    <div class="answers">
+                        <div id="slide_7_1"><div>Not Tracable In this Zone</div></div>
+                        <div id="slide_7_2"><div>Aorta</div></div>
+                        <div id="slide_7_3"><div>Celiac Trunk</div></div>
+                        <div id="slide_7_4"><div>Superior Mesenteric Artery (SMA)</div></div>
+                        <div id="slide_7_5"><div>Celiomesenteric Trunk (CM Trunk)</div></div>
+                        <div id="slide_7_6"><div>Common Hepatic Artery</div></div>
+                    </div>
+                </div>
+                <div id="slide_8">
+                    <div class="question">Which branches arise from the vessel <b>right or posterior to the main portal vein</b>?</div>
+                    <div class="answers">
+                        <div id="slide_8_1"><div>Left Hepatic Artery (LHA)</div></div>
+                        <div id="slide_8_2"><div>Right Hepatic Artery (RHA)</div></div>
+                        <div id="slide_8_3"><div>Gastroduodenal Artery (GDA)</div></div>
+                        <div id="slide_8_next"><div>Next →</div></div>
+                    </div>
+                </div>
+                <div id="slide_9">
+                    <div class="question">Is there a vessel <b>posterior to the superior mesenteric vein</b>?</div>
+                    <div class="answers">
+                        <div id="slide_9_1"><div>Yes</div></div>
+                        <div id="slide_9_2"><div>No</div></div>
+                    </div>
+                </div>
+                <div id="slide_10">
+                    <div class="question">Where is the vessel <b>posterior to the superior mesenteric vein</b> tracable to?</div>
+                    <div class="answers">
+                        <div id="slide_10_1"><div>Aorta</div></div>
+                        <div id="slide_10_2"><div>Superior Mesenteric Artery (SMA)</div></div>
+                    </div>
+                </div>
+                <div id="slide_11">
+                    <div class="question">Which branches arise from the vessel <b>posterior to the superior mesenteric vein</b>?</div>
+                    <div class="answers">
+                        <div id="slide_11_1"><div>Left Hepatic Artery (LHA)</div></div>
+                        <div id="slide_11_2"><div>Right Hepatic Artery (RHA)</div></div>
+                        <div id="slide_11_3"><div>Gastroduodenal Artery (GDA)</div></div>
+                        <div id="slide_11_next"><div>Next →</div></div>
+                    </div>
+                </div>
+                <div id="slide_12">
+                    <div class="question">Are <b>leash of vessels in the uncinate or head of pancreas</b> present?</div>
+                    <div class="answers">
+                        <div id="slide_12_1"><div>Yes</div></div>
+                        <div id="slide_12_2"><div>No</div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,5 +206,6 @@
         <script src="./js/form.js" type="module"></script>
         <script src="./js/score.js" type="module"></script>
         <script src="./js/diagram.js" type="module"></script>
+        <script src="./js/slides.js" type="module"></script>
     </body>
 </html>

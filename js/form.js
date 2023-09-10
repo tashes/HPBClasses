@@ -1,6 +1,6 @@
 import { displayDiagramFromConfig } from "./diagram.js";
 import { displayScoreFromConfig } from "./score.js";
-import { getUIElement } from "./ui.js";
+import { getAllUIElements, getUIElement } from "./ui.js";
 
 document.querySelector('#form').addEventListener('change', async (e) => {
     await recalculateScore();
@@ -48,6 +48,13 @@ export async function recalculateScore () {
 
     await displayScoreFromConfig(config);
     await displayDiagramFromConfig(config);
+};
+
+export async function clearForm () {
+    let eles = await getAllUIElements();
+    eles.forEach((ele) => {
+        ele.reset();
+    });
 };
 
 await recalculateScore();
